@@ -32,9 +32,9 @@ for location in placesReader:
 	#print(location[0], location[1]) #places showing up from CSV read
 	gmap.marker(float(location[0]), float(location[1]), title=location[2])
 	#print(gmap.points)
-	list2zip.marker(float(location[0]), float(location[1]), "a")
+	#list2zip.marker(float(location[0]), float(location[1]), "a")
 
-gmap.plot(list2zip, color = 'blue', edge_width = 3.0)
+#gmap.plot(list2zip, color = 'blue', edge_width = 3.0)
 
 #gmap.polygon(latitude_list, longitude_list, color = 'blue')
 
@@ -48,6 +48,8 @@ gmap.draw('map.html')
 
 # close everything
 placesFile.close()
+
+# the below makes this work for PC users; unnecessary with MacOS. gmplot creates html file with reversed "\" in all marker directories.
 
 import re
 with open('map.html','r') as originalMapFile:
