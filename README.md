@@ -7,6 +7,6 @@ WHERE: University of Victoria, British Columbia, Canada
 WHEN: June 3-6, 2019
 
 Examples: 
-A Newspaper Scraper using the newspaper Python library
-A GoogleMaps plotter showing the locations whence our class came to DHSI
+- A Newspaper Scraper using the newspaper Python library
+- A GoogleMaps plotter showing the locations whence our class came to DHSI
   - includes my efforts to figure out how to create heat maps and draw plot lines between scatter points
