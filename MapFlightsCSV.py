@@ -11,30 +11,48 @@ import numpy as np
 # read stuff from the file
 placesFile = open("Places.csv")
 placesReader = csv.reader(placesFile)
-#latitude_list = [42, 42, 44, 44]
+#latitude_list = [42, 42, 44, 44] #random rectangular coordinates somewhere around Rome
 #longitude_list = [14, 12, 12, 14]
-#latitude = (np.random.random_sample(size = 700) - 0.5) * 180
+#latitude = (np.random.random_sample(size = 700) - 0.5) * 180 #randomly generated markers
 #longitude = (np.random.random_sample(size = 700) - 0.5) * 360
 
 # convert CSV data into geoplotting
 
 gmap = gmplot.GoogleMapPlotter(53.79648, -1.54785, 2)
 #gmap = gmplot.GoogleMapPlotter(0,0,1)
-#gmap = gmplot.GoogleMapPlotter.from_geocode("Toronto, Ontario", 2)
+#gmap = gmplot.GoogleMapPlotter.from_geocode("Toronto, Canada")
 
 #create lists of lat and long
 #loop through each list [lat, long] in placesReader
 
-list2zip = []
+#list2zip = []
+longlist = [] 
+latlist = []
+#victoria = [48.4634, -123.3117]
+viclat = 48.4634
+viclong = -123.3117
+
+vicmarker = gmap.marker(viclat, viclong	, title = "Victoria, BC, Canada", color = "blue")
+
 
 
 for location in placesReader:
-	#print(location[0], location[1]) #places showing up from CSV read
-	gmap.marker(float(location[0]), float(location[1]), title=location[2])
+#	print(location[0], location[1]) #places showing up from CSV read
+	latlist = [float(location[0])]
+	latlist.append(viclat)
+	longlist = [float(location[1])]
+	longlist.append(viclong)
+	gmap.marker(float(location[0]), float(location[1]), title=location[2]+", "+location[3])
 	#print(gmap.points)
-	#list2zip.marker(float(location[0]), float(location[1]), "a")
+	gmap.plot(latlist, longlist, color = 'green', edge_width=3.0)
+#print(latlist, longlist)
 
-#gmap.plot(list2zip, color = 'blue', edge_width = 3.0)
+
+#draw plot lines between points:
+#gmap.plot(latlist, longlist, color = 'blue', edge_width = 3.0)
+
+#draw a line from each origin to destination (Victoria, BC)
+
 
 #gmap.polygon(latitude_list, longitude_list, color = 'blue')
 
