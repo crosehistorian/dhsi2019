@@ -1,9 +1,14 @@
 # dhsi2019
-Python codes from "Programming and Coding Fundamentals for Human(s|ists)" @DHSI2019
-This is a bunch of code that we wrote in the programming class at DHSI2019, mostly to do with data cleaning and manipulation, and hopefully some other cool stuff. My first coding experience.
+Python codes from "Programming and Coding Fundamentals for Human(s|ists)" @DHSI2019 
+
+This is a bunch of code that we wrote in the programming class at DHSI2019, mostly to do with data cleaning and manipulation, and hopefully some other cool stuff. My first coding experience. 
+
 WHO: Colin Rose
+
 WHAT: ""Programming and Coding Fundamentals for Human(s|ists)" @DHSI2019
+
 WHERE: University of Victoria, British Columbia, Canada
+
 WHEN: June 3-6, 2019
 
 Examples: 
