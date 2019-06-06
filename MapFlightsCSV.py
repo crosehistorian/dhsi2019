@@ -25,17 +25,15 @@ gmap = gmplot.GoogleMapPlotter(53.79648, -1.54785, 2)
 #create lists of lat and long
 #loop through each list [lat, long] in placesReader
 
-#list2zip = []
+
 longlist = [] 
 latlist = []
-#victoria = [48.4634, -123.3117]
 viclat = 48.4634
 viclong = -123.3117
-
 vicmarker = gmap.marker(viclat, viclong	, title = "Victoria, BC, Canada", color = "blue")
 
 
-
+# marker on origins of each participant in class and plot line from there to Victoria
 for location in placesReader:
 #	print(location[0], location[1]) #places showing up from CSV read
 	latlist = [float(location[0])]
@@ -51,9 +49,7 @@ for location in placesReader:
 #draw plot lines between points:
 #gmap.plot(latlist, longlist, color = 'blue', edge_width = 3.0)
 
-#draw a line from each origin to destination (Victoria, BC)
-
-
+#can also create polygons with defined lists of lat, long
 #gmap.polygon(latitude_list, longitude_list, color = 'blue')
 
 #create random heatmap
